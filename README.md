@@ -10,8 +10,8 @@
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/)
 
 ### 📊 **Estado del Proyecto**
-![Módulos Completados](https://img.shields.io/badge/Módulos%20Completados-24%2F32-green?style=flat-square)
-![Progreso](https://img.shields.io/badge/Progreso-75%25-blue?style=flat-square)
+![Módulos Completados](https://img.shields.io/badge/Módulos%20Completados-26%2F32-green?style=flat-square)
+![Progreso](https://img.shields.io/badge/Progreso-81%25-blue?style=flat-square)
 ![Última Actualización](https://img.shields.io/badge/Última%20Actualización-Diciembre%202024-lightblue?style=flat-square)
 ![Licencia](https://img.shields.io/badge/Licencia-Educativa-purple?style=flat-square)
 
@@ -62,8 +62,8 @@ Este repositorio se irá actualizando **módulo a módulo** con ejercicios, ejem
 | 🟡 **Frontend** | MOD 06-09 | HTML, CSS, JS, IA | ✅ Completo |
 | 🔵 **Bases de Datos** | MOD 10-14 | SQL, MySQL, IA | ✅ Completo |
 | 🟠 **Web Avanzado** | MOD 15-19 | HTML5, CSS3, Flexbox | ✅ Completo |
-| 🔴 **Backend Java** | MOD 20-24 | Java Avanzado, POO, Herencia, Excepciones, Generics, Colecciones | ✅ Completado |
-| 🔴 **Backend Java** | MOD 25+ | JDBC, Servlets, REST, Microservicios | 🔄 En Progreso |
+| 🔴 **Backend Java** | MOD 20-26 | Java Avanzado, POO, Excepciones, Colecciones, JDBC, I/O | ✅ Completado |
+| 🔴 **Backend Java** | MOD 27+ | Servlets, JSP, REST, Microservicios | 🔄 En Progreso |
 
 #### 📂 **Contenido por Módulo**
 ```
@@ -122,8 +122,8 @@ Este repositorio se irá actualizando **módulo a módulo** con ejercicios, ejem
 | 22 | Avanzado OOP – static, herencia, final, sobreescritura, polimorfismo, interfaces | ✅ Completado |
 | 23 | Excepciones – try/catch/finally, throws, throw, try-with-resources, excepciones propias | ✅ Completado |
 | 24 | Generics y colecciones – Enum, Set, List, Queue, Map, Iteradores, EntrySet | ✅ Completado |
-| 25 | JDBC y SQL – DML, JDBC, patrón DAO, Connection, inyección SQL | 🔹 Próximo |
-| 26 | Java Standard Web – flujo de datos, archivos de caracteres y bytes, Buffer | 🔹 Próximo |
+| 25 | JDBC y SQL – DML, JDBC, patrón DAO, Connection, PreparedStatement | ✅ Completado |
+| 26 | Java I/O – flujo de datos, archivos de caracteres y bytes, Buffer, logging | ✅ Completado |
 | 27 | Java Standard Web – HTTP, páginas, client/server-side, servlets | 🔹 Próximo |
 | 28 | Java Standard Web – Servlets, mapeo URL, RequestDispatcher, JSP, sesiones | 🔹 Próximo |
 | 29 | Java Standard Web – Programación funcional, Lambda, Stream | 🔹 Próximo |
