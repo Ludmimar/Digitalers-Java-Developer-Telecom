@@ -1,0 +1,37 @@
+databases:
+  # Base de Datos PostgreSQL (gratuita en Render)
+  - name: sistema-educativo-db
+    databaseName: sistema_educativo
+    user: edu_user
+
+services:
+  # Aplicación Web Java
+  - type: web
+    name: sistema-educativo-app
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: sistema-educativo-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: sistema-educativo-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: sistema-educativo-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: sistema-educativo-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: sistema-educativo-db
+          property: password
+      - key: JAVA_OPTS
+        value: "-Xmx512m -Xms256m"
+
