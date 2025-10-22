@@ -14,10 +14,17 @@ public class ConexionDB {
     
     // Configuración de la base de datos
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";  // MySQL
-    // private static final String DRIVER = "org.mariadb.jdbc.Driver";  // MariaDB
-    private static final String URL = "jdbc:mysql://localhost:3306/sistema_educativo";
-    private static final String USUARIO = "root";
-    private static final String CLAVE = "Boticaria89#";  // Cambiar según tu configuración
+    
+    // Variables de entorno para producción (Render) o valores por defecto para desarrollo
+    private static final String DB_HOST = System.getenv("DB_HOST") != null ? System.getenv("DB_HOST") : "localhost";
+    private static final String DB_PORT = System.getenv("DB_PORT") != null ? System.getenv("DB_PORT") : "3306";
+    private static final String DB_NAME = System.getenv("DB_NAME") != null ? System.getenv("DB_NAME") : "sistema_educativo";
+    private static final String USUARIO = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : "root";
+    private static final String CLAVE = System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : "Boticaria89#";
+    
+    // Construir URL dinámica
+    private static final String URL = "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME + 
+                                      "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     
     private static Connection conexion = null;
 

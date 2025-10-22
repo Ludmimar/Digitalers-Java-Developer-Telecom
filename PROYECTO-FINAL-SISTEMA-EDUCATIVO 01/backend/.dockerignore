@@ -1,0 +1,29 @@
+# Ignorar archivos innecesarios en el build de Docker
+
+# Directorios de build
+target/
+bin/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# Logs
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentación local
+*.md
+!README.md
+
