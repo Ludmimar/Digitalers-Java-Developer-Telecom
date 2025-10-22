@@ -12,8 +12,13 @@ import java.sql.SQLException;
  */
 public class ConexionDB {
     
-    // Configuración de la base de datos
-    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";  // MySQL
+    // Detectar si estamos en producción (Render) o desarrollo local
+    private static final boolean IS_PRODUCTION = System.getenv("DB_HOST") != null;
+    
+    // Driver según entorno
+    private static final String DRIVER = IS_PRODUCTION 
+        ? "org.postgresql.Driver"       // PostgreSQL en Render
+        : "com.mysql.cj.jdbc.Driver";   // MySQL en desarrollo local
     
     // Variables de entorno para producción (Render) o valores por defecto para desarrollo
     private static final String DB_HOST = System.getenv("DB_HOST") != null ? System.getenv("DB_HOST") : "localhost";
@@ -22,9 +27,11 @@ public class ConexionDB {
     private static final String USUARIO = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : "root";
     private static final String CLAVE = System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : "Boticaria89#";
     
-    // Construir URL dinámica
-    private static final String URL = "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME + 
-                                      "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+    // Construir URL dinámica según el tipo de base de datos
+    private static final String URL = IS_PRODUCTION
+        ? "jdbc:postgresql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME + "?sslmode=require"
+        : "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME + 
+          "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     
     private static Connection conexion = null;
 
