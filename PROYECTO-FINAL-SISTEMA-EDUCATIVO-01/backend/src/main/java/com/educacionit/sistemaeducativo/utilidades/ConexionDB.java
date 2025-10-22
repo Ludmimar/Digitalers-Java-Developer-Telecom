@@ -12,26 +12,31 @@ import java.sql.SQLException;
  */
 public class ConexionDB {
     
-    // Detectar si estamos en producción (Render) o desarrollo local
-    private static final boolean IS_PRODUCTION = System.getenv("DB_HOST") != null;
+    // Detectar si estamos en producción (Render usa DATABASE_URL)
+    private static final String DATABASE_URL = System.getenv("DATABASE_URL");
+    private static final boolean IS_PRODUCTION = DATABASE_URL != null;
     
     // Driver según entorno
     private static final String DRIVER = IS_PRODUCTION 
         ? "org.postgresql.Driver"       // PostgreSQL en Render
         : "com.mysql.cj.jdbc.Driver";   // MySQL en desarrollo local
     
-    // Variables de entorno para producción (Render) o valores por defecto para desarrollo
-    private static final String DB_HOST = System.getenv("DB_HOST") != null ? System.getenv("DB_HOST") : "localhost";
-    private static final String DB_PORT = System.getenv("DB_PORT") != null ? System.getenv("DB_PORT") : "3306";
-    private static final String DB_NAME = System.getenv("DB_NAME") != null ? System.getenv("DB_NAME") : "sistema_educativo";
-    private static final String USUARIO = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : "root";
-    private static final String CLAVE = System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : "Boticaria89#";
+    // Variables para desarrollo local
+    private static final String DB_HOST_LOCAL = "localhost";
+    private static final String DB_PORT_LOCAL = "3306";
+    private static final String DB_NAME_LOCAL = "sistema_educativo";
+    private static final String USUARIO_LOCAL = "root";
+    private static final String CLAVE_LOCAL = "Boticaria89#";
     
-    // Construir URL dinámica según el tipo de base de datos
+    // URL y credenciales
     private static final String URL = IS_PRODUCTION
-        ? "jdbc:postgresql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME + "?sslmode=require"
-        : "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME + 
+        ? DATABASE_URL  // Render proporciona la URL completa
+        : "jdbc:mysql://" + DB_HOST_LOCAL + ":" + DB_PORT_LOCAL + "/" + DB_NAME_LOCAL + 
           "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+    
+    // Usuario y clave (en producción se extraen de DATABASE_URL, así que no se usan estas variables)
+    private static final String USUARIO = USUARIO_LOCAL;
+    private static final String CLAVE = CLAVE_LOCAL;
     
     private static Connection conexion = null;
 
@@ -53,16 +58,23 @@ public class ConexionDB {
                 Class.forName(DRIVER);
                 
                 // Establecer conexión
-                conexion = DriverManager.getConnection(URL, USUARIO, CLAVE);
-                
-                System.out.println("✅ Conexión exitosa a la base de datos");
+                if (IS_PRODUCTION) {
+                    // En producción, DATABASE_URL ya incluye usuario y contraseña
+                    conexion = DriverManager.getConnection(URL);
+                    System.out.println("✅ Conexión exitosa a PostgreSQL (Producción)");
+                } else {
+                    // En desarrollo local, usar credenciales separadas
+                    conexion = DriverManager.getConnection(URL, USUARIO, CLAVE);
+                    System.out.println("✅ Conexión exitosa a MySQL (Desarrollo)");
+                }
             }
         } catch (ClassNotFoundException e) {
-            System.err.println("❌ Error: Driver no encontrado");
+            System.err.println("❌ Error: Driver no encontrado - " + DRIVER);
             e.printStackTrace();
             throw new SQLException("Driver de base de datos no encontrado", e);
         } catch (SQLException e) {
             System.err.println("❌ Error al conectar con la base de datos");
+            System.err.println("URL: " + (IS_PRODUCTION ? "DATABASE_URL (oculta)" : URL));
             e.printStackTrace();
             throw e;
         }
