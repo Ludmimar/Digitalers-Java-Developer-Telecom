@@ -45,7 +45,9 @@ public class ConexionDB {
     // URL y credenciales
     private static final String URL = IS_PRODUCTION
         ? (DATABASE_URL != null 
-            ? (DATABASE_URL.startsWith("jdbc:") ? DATABASE_URL : "jdbc:" + DATABASE_URL)  // Asegurar prefijo jdbc:
+            ? (DATABASE_URL.startsWith("jdbc:") ? DATABASE_URL : 
+               DATABASE_URL.startsWith("postgresql://") ? "jdbc:" + DATABASE_URL : 
+               "jdbc:postgresql://" + DATABASE_URL)  // Manejar diferentes formatos de DATABASE_URL
             : "jdbc:postgresql://" + DB_HOST_PROD + ":" + DB_PORT_PROD + "/" + DB_NAME_PROD + "?sslmode=require")
         : "jdbc:mysql://" + DB_HOST_LOCAL + ":" + DB_PORT_LOCAL + "/" + DB_NAME_LOCAL + 
           "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
