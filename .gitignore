@@ -1,0 +1,56 @@
+# Archivos compilados de Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Directorios de build
+target/
+build/
+bin/
+out/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Maven
+dependency-reduced-pom.xml
+.mvn/
+mvnw
+mvnw.cmd
+
+# Tomcat
+backend/target/tomcat/
+
+# Base de datos (no subir archivos locales de MySQL Workbench)
+*.mwb.bak
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+*~.nib
+temp/
+tmp/
+
+# Archivos de configuración locales (mantener los .properties de ejemplo)
+# backend/src/main/resources/config-local.properties
+
