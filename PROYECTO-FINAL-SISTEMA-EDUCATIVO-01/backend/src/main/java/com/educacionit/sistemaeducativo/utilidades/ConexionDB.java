@@ -12,9 +12,16 @@ import java.sql.SQLException;
  */
 public class ConexionDB {
     
-    // Detectar si estamos en producción (Render usa DATABASE_URL)
+    // Detectar si estamos en producción (Render)
     private static final String DATABASE_URL = System.getenv("DATABASE_URL");
-    private static final boolean IS_PRODUCTION = DATABASE_URL != null;
+    private static final String RENDER_SERVICE_NAME = System.getenv("RENDER_SERVICE_NAME");
+    private static final String RENDER_SERVICE_ID = System.getenv("RENDER_SERVICE_ID");
+    
+    // Múltiples formas de detectar producción
+    private static final boolean IS_PRODUCTION = DATABASE_URL != null || 
+                                                 RENDER_SERVICE_NAME != null || 
+                                                 RENDER_SERVICE_ID != null ||
+                                                 System.getenv("PORT") != null;
     
     // Driver según entorno
     private static final String DRIVER = IS_PRODUCTION 
@@ -28,15 +35,28 @@ public class ConexionDB {
     private static final String USUARIO_LOCAL = "root";
     private static final String CLAVE_LOCAL = "Boticaria89#";
     
+    // Variables de entorno para producción (si DATABASE_URL no está disponible)
+    private static final String DB_HOST_PROD = System.getenv("DB_HOST");
+    private static final String DB_PORT_PROD = System.getenv("DB_PORT");
+    private static final String DB_NAME_PROD = System.getenv("DB_NAME");
+    private static final String USUARIO_PROD = System.getenv("DB_USER");
+    private static final String CLAVE_PROD = System.getenv("DB_PASSWORD");
+    
     // URL y credenciales
     private static final String URL = IS_PRODUCTION
-        ? DATABASE_URL  // Render proporciona la URL completa
+        ? (DATABASE_URL != null 
+            ? DATABASE_URL  // Render proporciona la URL completa
+            : "jdbc:postgresql://" + DB_HOST_PROD + ":" + DB_PORT_PROD + "/" + DB_NAME_PROD + "?sslmode=require")
         : "jdbc:mysql://" + DB_HOST_LOCAL + ":" + DB_PORT_LOCAL + "/" + DB_NAME_LOCAL + 
           "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     
-    // Usuario y clave (en producción se extraen de DATABASE_URL, así que no se usan estas variables)
-    private static final String USUARIO = USUARIO_LOCAL;
-    private static final String CLAVE = CLAVE_LOCAL;
+    // Usuario y clave
+    private static final String USUARIO = IS_PRODUCTION 
+        ? (DATABASE_URL != null ? null : USUARIO_PROD)  // Si DATABASE_URL existe, no usar credenciales separadas
+        : USUARIO_LOCAL;
+    private static final String CLAVE = IS_PRODUCTION 
+        ? (DATABASE_URL != null ? null : CLAVE_PROD)    // Si DATABASE_URL existe, no usar credenciales separadas
+        : CLAVE_LOCAL;
     
     private static Connection conexion = null;
 
@@ -57,11 +77,21 @@ public class ConexionDB {
                 // Cargar el driver
                 Class.forName(DRIVER);
                 
+                // Debug: mostrar información del entorno
+                System.out.println("🔍 Entorno detectado: " + (IS_PRODUCTION ? "PRODUCCIÓN" : "DESARROLLO"));
+                System.out.println("🔍 Driver: " + DRIVER);
+                
                 // Establecer conexión
                 if (IS_PRODUCTION) {
-                    // En producción, DATABASE_URL ya incluye usuario y contraseña
-                    conexion = DriverManager.getConnection(URL);
-                    System.out.println("✅ Conexión exitosa a PostgreSQL (Producción)");
+                    if (DATABASE_URL != null) {
+                        // Caso 1: DATABASE_URL disponible (método preferido de Render)
+                        conexion = DriverManager.getConnection(URL);
+                        System.out.println("✅ Conexión exitosa a PostgreSQL (DATABASE_URL)");
+                    } else {
+                        // Caso 2: Variables separadas (fallback)
+                        conexion = DriverManager.getConnection(URL, USUARIO, CLAVE);
+                        System.out.println("✅ Conexión exitosa a PostgreSQL (Variables separadas)");
+                    }
                 } else {
                     // En desarrollo local, usar credenciales separadas
                     conexion = DriverManager.getConnection(URL, USUARIO, CLAVE);
@@ -74,7 +104,8 @@ public class ConexionDB {
             throw new SQLException("Driver de base de datos no encontrado", e);
         } catch (SQLException e) {
             System.err.println("❌ Error al conectar con la base de datos");
-            System.err.println("URL: " + (IS_PRODUCTION ? "DATABASE_URL (oculta)" : URL));
+            System.err.println("🔍 Entorno: " + (IS_PRODUCTION ? "PRODUCCIÓN" : "DESARROLLO"));
+            System.err.println("🔍 URL: " + (IS_PRODUCTION && DATABASE_URL != null ? "DATABASE_URL (oculta)" : URL));
             e.printStackTrace();
             throw e;
         }
