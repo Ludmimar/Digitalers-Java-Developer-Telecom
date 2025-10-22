@@ -11,10 +11,13 @@
 [![JSP](https://img.shields.io/badge/JSP-007396?style=flat-square&logo=java&logoColor=white)](https://www.oracle.com/java/)
 [![Servlets](https://img.shields.io/badge/Servlets-007396?style=flat-square&logo=java&logoColor=white)](https://www.oracle.com/java/)
 [![Tomcat](https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=apache-tomcat&logoColor=black)](https://tomcat.apache.org/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![API REST](https://img.shields.io/badge/API%20REST-005571?style=flat-square&logo=swagger&logoColor=white)](https://swagger.io/)
+[![Microservices](https://img.shields.io/badge/Microservices-2496ED?style=flat-square&logo=docker&logoColor=white)](https://microservices.io/)
 
 ### 📊 **Estado del Proyecto**
-![Módulos Completados](https://img.shields.io/badge/Módulos%20Completados-28%2F28-brightgreen?style=flat-square)
-![Progreso](https://img.shields.io/badge/Progreso-100%25-success?style=flat-square)
+![Módulos Completados](https://img.shields.io/badge/Módulos%20Completados-28%2F32-yellow?style=flat-square)
+![Progreso](https://img.shields.io/badge/Progreso-87.5%25-yellow?style=flat-square)
 ![Última Actualización](https://img.shields.io/badge/Última%20Actualización-Octubre%202025-lightblue?style=flat-square)
 ![Proyectos Finales](https://img.shields.io/badge/Proyectos%20Finales-2%2F2-success?style=flat-square)
 ![Licencia](https://img.shields.io/badge/Licencia-Educativa-purple?style=flat-square)
@@ -28,7 +31,8 @@ Bienvenido al curso completo de **Java Fullstack & Desarrollo Web** 🎯
 Este repositorio documenta mi trayectoria completa en el programa Digitalers - Java Developer Telecom, desde los fundamentos de programación hasta el desarrollo de aplicaciones web empresariales completas con Java EE.
 
 **¿Qué encontrarás aquí?**
-- ✅ **28 módulos completados** con ejercicios, laboratorios y desafíos
+- ✅ **28 módulos completados** (MOD 01-28) con ejercicios, laboratorios y desafíos
+- 🔄 **4 módulos en progreso** (MOD 29-32) - Spring Boot, Microservicios, API REST
 - ✅ **2 proyectos finales integradores** (Sistema Educativo)
 - ✅ **1,500+ archivos de código** Java, JavaScript, SQL, HTML, CSS, JSP
 - ✅ **100+ documentos README** con explicaciones detalladas
@@ -78,6 +82,7 @@ Este repositorio ha sido actualizado **módulo a módulo** con ejercicios progre
 | 🔵 **Bases de Datos** | MOD 10-14 | SQL, MySQL, Joins, Funciones | 120+ archivos | ✅ Completo |
 | 🟠 **Web Avanzado** | MOD 15-19 | HTML5, CSS3, Flexbox, Forms | 240+ archivos | ✅ Completo |
 | 🔴 **Backend Java EE** | MOD 20-28 | POO Avanzada, JDBC, Servlets, JSP | 900+ archivos | ✅ Completo |
+| 🟣 **Spring Framework** | MOD 29-32 | Spring Boot, Microservicios, API REST | En progreso | 🔄 En desarrollo |
 | 🎯 **Proyectos Finales** | 2 Proyectos | Sistema Educativo (Consola + Web) | 125+ archivos | ✅ Completo |
 
 #### 📂 **Contenido por Módulo**
@@ -167,6 +172,15 @@ Este repositorio ha sido actualizado **módulo a módulo** con ejercicios progre
 | **MOD 27** | Servlets | Arquitectura cliente-servidor, HttpServlet, doGet/doPost, RequestDispatcher, Tomcat | ✅ Completado |
 | **MOD 28** | JSP y Sesiones | JSP avanzado, HttpSession, JSTL, manejo de estado, integración completa | ✅ Completado |
 
+### 🟣 **FASE 6: Spring Framework y Microservicios** (Módulos 29-32) - **En desarrollo**
+
+| Módulo | Tema | Contenido | Estado |
+|--------|------|-----------|--------|
+| **MOD 29** | Spring Boot Intro | Spring Framework, Spring Boot, Inyección de dependencias, Configuración | 🔄 En progreso |
+| **MOD 30** | Spring Web | Spring MVC, REST Controllers, @RestController, Spring Data JPA | 🔄 Pendiente |
+| **MOD 31** | API REST Completa | Creación de API REST, Validaciones, Excepciones, Documentación con Swagger | 🔄 Pendiente |
+| **MOD 32** | Microservicios | Arquitectura de microservicios, Spring Cloud, Eureka, API Gateway | 🔄 Pendiente |
+
 ---
 
 ## 🎯 Objetivo del Curso
@@ -230,9 +244,11 @@ cd "PROYECTO-FINAL-SISTEMA-EDUCATIVO 01"
 
 
 ## ⏱️ Duración
-- **Total del curso**: 28 módulos completados
-- **Tiempo invertido**: ~7 meses
+- **Total del curso**: 32 módulos
+- **Módulos completados**: 28/32 (87.5%)
+- **Tiempo invertido hasta ahora**: ~7 meses
 - **Horas de estudio**: 170+ horas
+- **Tiempo estimado restante**: 1-2 meses (MOD 29-32)
 
 ## 🏆 Competencias Adquiridas
 
@@ -296,9 +312,9 @@ cd "PROYECTO-FINAL-SISTEMA-EDUCATIVO 01"
 
 ---
 
-## 🎉 Curso Completado con Éxito
+## 🎉 Curso en Progreso - 87.5% Completado
 
-**¡Felicitaciones!** Has completado exitosamente los **28 módulos** del curso **Java Fullstack & Desarrollo Web - Digitalers Telecom**. 
+**¡Excelente progreso!** Has completado exitosamente **28 de 32 módulos** del curso **Java Fullstack & Desarrollo Web - Digitalers Telecom**. 
 
 ### 🎓 Logros del Programa
 
@@ -378,7 +394,19 @@ Este repositorio representa **7 meses** de aprendizaje intensivo y contiene:
 
 ## 🎓 Logros del Curso
 
-### 📚 **Módulos Completados**: 28/28 (100%)
+### 📚 **Módulos Completados**: 28/32 (87.5%)
+
+**✅ Fases Completadas**:
+- ✅ FASE 1: Fundamentos de Java (MOD 01-05)
+- ✅ FASE 2: Desarrollo Web Frontend & IA (MOD 06-09)
+- ✅ FASE 3: Bases de Datos SQL (MOD 10-14)
+- ✅ FASE 4: HTML/CSS Avanzado (MOD 15-19)
+- ✅ FASE 5: Java Avanzado y Backend Java EE (MOD 20-28)
+- 🔄 FASE 6: Spring Framework y Microservicios (MOD 29-32) - En progreso
+
+---
+
+### 📚 **Detalle por Módulo**
 
 **Fundamentos de Programación** (MOD 01-05)
 - ✅ Variables, tipos de datos, operadores
@@ -414,6 +442,12 @@ Este repositorio representa **7 meses** de aprendizaje intensivo y contiene:
 - ✅ Java EE (Servlets, JSP)
 - ✅ HttpSession y manejo de estado
 - ✅ Aplicaciones web MVC
+
+**Spring Framework y Microservicios** (MOD 29-32)
+- 🔄 Spring Boot (en progreso)
+- 🔄 Spring MVC y REST Controllers (pendiente)
+- 🔄 API REST con validaciones (pendiente)
+- 🔄 Arquitectura de microservicios (pendiente)
 
 ---
 
@@ -610,14 +644,20 @@ DB_PASSWORD=tu-password
 
 ## 🚀 Próximos Pasos
 
-### 🔄 En Desarrollo
-- Migración a Spring Boot del proyecto final
-- Implementación de API REST
-- Frontend con React
+### 🎯 **Módulos Pendientes** (MOD 29-32)
+- **MOD 29**: Spring Boot - Introducción y configuración
+- **MOD 30**: Spring Web - Controllers, Spring Data JPA
+- **MOD 31**: API REST - Creación completa con validaciones y Swagger
+- **MOD 32**: Microservicios - Arquitectura, Spring Cloud, Eureka
+
+### 🔄 **Proyecto Final con Spring Boot**
+- Migración del Sistema Educativo a Spring Boot
+- Implementación de API REST completa
+- Frontend con React o Angular
 - Dockerización completa de aplicaciones
 - CI/CD con GitHub Actions
-- Despliegue en Railway.app
-- Monitoreo y logging avanzado
+- Despliegue en Railway.app o Azure
+- Monitoreo y logging con Spring Actuator
 
 ### ¿Quieres contribuir?
 Si encuentras algún error o tienes sugerencias de mejora, ¡siéntete libre de abrir un issue o enviar un pull request!
