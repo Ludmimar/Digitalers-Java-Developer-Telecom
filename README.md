@@ -116,70 +116,63 @@ Este repositorio ha sido actualizado **módulo a módulo** con ejercicios progre
 
 ---
 
-## 📊 Progreso del Curso - Detallado
+## 📊 Progreso del Curso
 
-### 🟢 **FASE 1: Fundamentos de Java** (Módulos 1-5) - **140+ archivos**
-| Módulo | Tema | Contenido | Estado |
-|--------|------|-----------|--------|
-| **MOD 01** | Introducción a Java | HolaMundo, Variables, IDE de desarrollo | ✅ Completado |
-| **MOD 02** | Java Intermedio | Casting, String, Math, Operadores | ✅ Completado |
-| **MOD 03** | Condicionales | if, if-else, anidados, switch, operador ternario | ✅ Completado |
-| **MOD 04** | Estructuras de bucle | while, do-while, for, break/continue | ✅ Completado |
-| **MOD 05** | Métodos y Arreglos | Funciones, procedimientos, arrays, debugging, Proyecto Integrador Etapa 2 | ✅ Completado |
+### 🟢 **FASE 1: Fundamentos de Java** (Módulos 1-5)
+| Módulo | Tema | Estado |
+|--------|------|--------|
+| 1 | Introducción a Java – Organización del curso | ✅ Completado |
+| 2 | Introducción a Java – Casting, String y Math | ✅ Completado |
+| 3 | Condicionales – if, if else, anidados, switch, operador ternario | ✅ Completado |
+| 4 | Estructuras de bucle – while, do while, for, break/continue | ✅ Completado |
+| 5 | Métodos y arreglos – introducción, parámetros, tipos de métodos, manejo de arreglos | ✅ Completado |
 
-### 🟡 **FASE 2: Desarrollo Web Frontend & IA** (Módulos 6-9) - **180+ archivos**
-| Módulo | Tema | Contenido | Estado |
-|--------|------|-----------|--------|
-| **MOD 06** | Entorno de desarrollo | VS Code, LiveShare, GitHub, IA (ChatGPT, Copilot) | ✅ Completado |
-| **MOD 07** | POO y Frontend | Clases, objetos, atributos, métodos, HTML, JavaScript | ✅ Completado |
-| **MOD 08** | Modelo OO con IA | Análisis, diagramas UML, buenas prácticas, prototipos | ✅ Completado |
-| **MOD 09** | Integración Full | HTML+CSS+JS, IA generativa, GitHub Pages, Proyecto Funcional | ✅ Completado |
+### 🟡 **FASE 2: Desarrollo Web Frontend** (Módulos 6-9)
+| Módulo | Tema | Estado |
+|--------|------|--------|
+| 6 | Entorno de desarrollo – VS Code, LiveShare, GitHub, Coding Assistants | ✅ Completado |
+| 7 | Clases y objetos – atributos, métodos, constructores, encapsulamiento, testing | ✅ Completado |
+| 8 | Modelo orientado a objetos con IA – análisis, diagramas, buenas prácticas | ✅ Completado |
+| 9 | Integración frontend-backend – HTML con IA, JS, prototipo funcional, GitHub Pages | ✅ Completado |
 
-### 🔵 **FASE 3: Bases de Datos SQL** (Módulos 10-14) - **120+ archivos**
-| Módulo | Tema | Contenido | Estado |
-|--------|------|-----------|--------|
-| **MOD 10** | Introducción a BD | ER, SQL básico, SELECT, FROM, WHERE, Proyecto Integrador Etapa 1 | ✅ Completado |
-| **MOD 11** | Manejo de BD | IDE MySQL, INSERT masivo, estructuras, filtros avanzados | ✅ Completado |
-| **MOD 12** | CRUD Completo | CREATE, UPDATE, DELETE, transacciones, debugging con IA | ✅ Completado |
-| **MOD 13** | Agrupamiento y Joins | COUNT, SUM, AVG, GROUP BY, INNER/LEFT/RIGHT JOIN | ✅ Completado |
-| **MOD 14** | SQL Avanzado | Subconsultas, CASE, funciones de texto/fecha, backup/restore | ✅ Completado |
+### 🔵 **FASE 3: Bases de Datos** (Módulos 10-14)
+| Módulo | Tema | Estado |
+|--------|------|--------|
+| 10 | Bases de datos – Introducción, ER, SQL, consultas básicas, IA | ✅ Completado |
+| 11 | Manejo de BD – IDE, inserción de registros, masivo, estructuras, where | ✅ Completado |
+| 12 | Consultas avanzadas – creación, actualización, eliminación, errores con IA | ✅ Completado |
+| 13 | Funciones de agrupamiento y joins – count, sum, group by, join, IA | ✅ Completado |
+| 14 | Funciones avanzadas – subconsultas, case, texto, fecha, matemáticas, backup | ✅ Completado |
 
-### 🟠 **FASE 4: HTML/CSS Avanzado** (Módulos 15-19) - **240+ archivos**
-| Módulo | Tema | Contenido | Estado |
-|--------|------|-----------|--------|
-| **MOD 15** | HTML5 Básico | Estructura semántica, texto, CSS inicial, Proyecto Integrador Etapa 1 | ✅ Completado |
-| **MOD 16** | HTML5 + CSS3 | Imágenes (36 PNG), vínculos, anclas, modelo de cajas, propiedades | ✅ Completado |
-| **MOD 17** | Formularios | Inputs, select, validation, patterns, datepicker, SVG | ✅ Completado |
-| **MOD 18** | Publicación Web | Formularios funcionales, FTP, GitHub Pages, debugging | ✅ Completado |
-| **MOD 19** | Flexbox & Multimedia | Flexbox, Grid, video, iframe, tablas avanzadas, responsive | ✅ Completado |
+### 🟠 **FASE 4: HTML/CSS Avanzado** (Módulos 15-19)
+| Módulo | Tema | Estado |
+|--------|------|--------|
+| 15 | HTML básico – estructura, texto, CSS inicial, integración con IA | ✅ Completado |
+| 16 | HTML y CSS – imágenes, vínculos, anclas, cajas, propiedades y IA | ✅ Completado |
+| 17 | Formularios HTML – inputs, menús, validación, Pattern y DatePicker con IA | ✅ Completado |
+| 18 | Publicación de proyecto – formulario funcional, errores con IA, FTP, GitHub Pages | ✅ Completado |
+| 19 | Flex, multimedia y tablas – Flex, video, iframe, tablas, CSS con IA | ✅ Completado |
 
-### 🔴 **FASE 5: Java Avanzado y Backend Java EE** (Módulos 20-28) - **900+ archivos**
+### 🔴 **FASE 5: Java Avanzado y Backend** (Módulos 20-28)
+| Módulo | Tema | Estado |
+|--------|------|--------|
+| 20 | Java básico – JDK, JVM, sintaxis, Eclipse, Maven, variables, operadores, flujo | ✅ Completado |
+| 21 | Paradigma Orientado a Objetos – clase, objeto, atributos, métodos, encapsulamiento | ✅ Completado |
+| 22 | Avanzado OOP – static, herencia, final, sobreescritura, polimorfismo, interfaces | ✅ Completado |
+| 23 | Excepciones – try/catch/finally, throws, throw, try-with-resources, excepciones propias | ✅ Completado |
+| 24 | Generics y colecciones – Enum, Set, List, Queue, Map, Iteradores, EntrySet | ✅ Completado |
+| 25 | JDBC y SQL – DML, JDBC, patrón DAO, Connection, PreparedStatement | ✅ Completado |
+| 26 | Java I/O – flujo de datos, archivos de caracteres y bytes, Buffer, logging | ✅ Completado |
+| 27 | Java Standard Web – HTTP, páginas, client/server-side, servlets | ✅ Completado |
+| 28 | Java Standard Web – Servlets, mapeo URL, RequestDispatcher, JSP, sesiones | ✅ Completado |
 
-#### **Bloque 1: Java SE Profesional** (MOD 20-24)
-| Módulo | Tema | Contenido | Estado |
-|--------|------|-----------|--------|
-| **MOD 20** | Java SE Básico | JDK, JVM, Eclipse, Maven, variables, operadores, ciclos, arrays | ✅ Completado |
-| **MOD 21** | POO Fundamental | Clases, objetos, atributos, métodos, constructores, encapsulamiento, paquetes | ✅ Completado |
-| **MOD 22** | POO Avanzado | Static, herencia, final, sobreescritura, polimorfismo, interfaces, abstracción | ✅ Completado |
-| **MOD 23** | Excepciones | try/catch/finally, throws, throw, try-with-resources, excepciones personalizadas | ✅ Completado |
-| **MOD 24** | Genéricos y Colecciones | Enum, Generics, Set, List, Queue, Map, Iteradores, Comparadores | ✅ Completado |
-
-#### **Bloque 2: Persistencia y Backend** (MOD 25-28)
-| Módulo | Tema | Contenido | Estado |
-|--------|------|-----------|--------|
-| **MOD 25** | JDBC y DAO | JDBC, Connection, PreparedStatement, Patrón DAO, transacciones | ✅ Completado |
-| **MOD 26** | Java I/O y Logging | Streams, FileReader/Writer, BufferedReader/Writer, logging, properties | ✅ Completado |
-| **MOD 27** | Servlets | Arquitectura cliente-servidor, HttpServlet, doGet/doPost, RequestDispatcher, Tomcat | ✅ Completado |
-| **MOD 28** | JSP y Sesiones | JSP avanzado, HttpSession, JSTL, manejo de estado, integración completa | ✅ Completado |
-
-### 🟣 **FASE 6: Spring Framework y Microservicios** (Módulos 29-32) - **En desarrollo**
-
-| Módulo | Tema | Contenido | Estado |
-|--------|------|-----------|--------|
-| **MOD 29** | Spring Boot Intro | Spring Framework, Spring Boot, Inyección de dependencias, Configuración | 🔄 En progreso |
-| **MOD 30** | Spring Web | Spring MVC, REST Controllers, @RestController, Spring Data JPA | 🔄 Pendiente |
-| **MOD 31** | API REST Completa | Creación de API REST, Validaciones, Excepciones, Documentación con Swagger | 🔄 Pendiente |
-| **MOD 32** | Microservicios | Arquitectura de microservicios, Spring Cloud, Eureka, API Gateway | 🔄 Pendiente |
+### 🟣 **FASE 6: Spring Framework y Microservicios** (Módulos 29-32)
+| Módulo | Tema | Estado |
+|--------|------|--------|
+| 29 | Spring Boot – Spring Framework, Inyección de dependencias, Configuración | 🔄 En progreso |
+| 30 | REST con Java – concepto, tipos de datos, métodos HTTP, JSON, Postman | 🔹 Pendiente |
+| 31 | REST con Java – serializadores, JSONP, Jackson, Gson, autenticación y autorización | 🔹 Pendiente |
+| 32 | REST y microservicios – Swagger, OpenAPI, microservicios, patrones de APIs | 🔹 Pendiente |
 
 ---
 
