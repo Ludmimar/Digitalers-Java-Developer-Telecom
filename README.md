@@ -546,14 +546,78 @@ Este repositorio contiene material educativo del curso **Digitalers - Java Devel
 
 ---
 
+## 🌐 Despliegue del Proyecto
+
+### 🚀 **Opciones de Hosting Gratuito Recomendadas**
+
+#### **1. Railway.app** ⭐ (MÁS RECOMENDADA)
+- ✅ Deploy en minutos con soporte nativo para Java/Tomcat
+- ✅ MySQL incluido en el plan gratuito
+- ✅ $5 USD/mes de crédito gratis
+- ✅ Deploy automático desde GitHub
+- 📦 **Características**: 500 horas/mes, 1GB RAM, 1GB disco
+
+**Comandos rápidos**:
+```bash
+npm i -g @railway/cli
+railway login
+railway init
+railway up
+```
+
+#### **2. Oracle Cloud Free Tier** (SIEMPRE GRATIS)
+- ✅ Recursos ilimitados en el tiempo
+- ✅ 2 VMs con 1GB RAM cada una
+- ✅ Base de datos MySQL/Oracle gratuita
+- ⚙️ Requiere configuración manual (SSH, Tomcat, MySQL)
+
+#### **3. Render.com**
+- ✅ Completamente gratuito con limitaciones
+- ✅ PostgreSQL gratuito (750 horas/mes)
+- ⚠️ Se duerme después de 15 min de inactividad
+- ⚠️ MySQL NO incluido (solo PostgreSQL)
+
+#### **4. Fly.io** (Con Docker)
+- ✅ 3 VMs gratuitas (256MB RAM cada una)
+- ✅ Basado en Docker
+- 🐋 Requiere crear `Dockerfile`
+
+### 📋 **Preparación para Deployment**
+
+Para Railway o cualquier plataforma basada en contenedores:
+
+```dockerfile
+# Dockerfile en la raíz del proyecto backend
+FROM tomcat:9-jdk11
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
+```
+
+**Variables de entorno necesarias**:
+```properties
+DB_HOST=tu-host-mysql
+DB_PORT=3306
+DB_NAME=sistema_educativo
+DB_USER=tu-usuario
+DB_PASSWORD=tu-password
+```
+
+**Ver documentación completa de deployment** en:
+- `PROYECTO-FINAL-SISTEMA-EDUCATIVO 01/docs/01-INICIO-RAPIDO.md`
+
+---
+
 ## 🚀 Próximos Pasos
 
-### En desarrollo
-- 🔄 Migración a Spring Boot del proyecto final
-- 🔄 Implementación de API REST
-- 🔄 Frontend con React
-- 🔄 Dockerización de aplicaciones
-- 🔄 Despliegue en la nube (AWS/Azure)
+### 🔄 En Desarrollo
+- Migración a Spring Boot del proyecto final
+- Implementación de API REST
+- Frontend con React
+- Dockerización completa de aplicaciones
+- CI/CD con GitHub Actions
+- Despliegue en Railway.app
+- Monitoreo y logging avanzado
 
 ### ¿Quieres contribuir?
 Si encuentras algún error o tienes sugerencias de mejora, ¡siéntete libre de abrir un issue o enviar un pull request!
