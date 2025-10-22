@@ -45,7 +45,7 @@ public class ConexionDB {
     // URL y credenciales
     private static final String URL = IS_PRODUCTION
         ? (DATABASE_URL != null 
-            ? DATABASE_URL  // Render proporciona la URL completa
+            ? (DATABASE_URL.startsWith("jdbc:") ? DATABASE_URL : "jdbc:" + DATABASE_URL)  // Asegurar prefijo jdbc:
             : "jdbc:postgresql://" + DB_HOST_PROD + ":" + DB_PORT_PROD + "/" + DB_NAME_PROD + "?sslmode=require")
         : "jdbc:mysql://" + DB_HOST_LOCAL + ":" + DB_PORT_LOCAL + "/" + DB_NAME_LOCAL + 
           "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
@@ -80,6 +80,11 @@ public class ConexionDB {
                 // Debug: mostrar información del entorno
                 System.out.println("🔍 Entorno detectado: " + (IS_PRODUCTION ? "PRODUCCIÓN" : "DESARROLLO"));
                 System.out.println("🔍 Driver: " + DRIVER);
+                System.out.println("🔍 DATABASE_URL disponible: " + (DATABASE_URL != null ? "SÍ" : "NO"));
+                if (DATABASE_URL != null) {
+                    System.out.println("🔍 DATABASE_URL: " + DATABASE_URL.substring(0, Math.min(50, DATABASE_URL.length())) + "...");
+                }
+                System.out.println("🔍 URL final: " + URL.substring(0, Math.min(50, URL.length())) + "...");
                 
                 // Establecer conexión
                 if (IS_PRODUCTION) {
