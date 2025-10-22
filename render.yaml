@@ -10,6 +10,7 @@ services:
     name: sistema-educativo-app
     runtime: docker
     dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
     envVars:
       - key: DB_HOST
         fromDatabase:
@@ -31,4 +32,6 @@ services:
         fromDatabase:
           name: sistema-educativo-db
           property: password
+      - key: JAVA_OPTS
+        value: "-Xmx512m -Xms256m"
 
