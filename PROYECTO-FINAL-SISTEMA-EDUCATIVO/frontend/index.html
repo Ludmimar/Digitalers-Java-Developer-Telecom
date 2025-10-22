@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Gestión Educativa - Proyecto Final Java Fullstack">
+    <meta name="author" content="Ludmila Martos">
+    <title>Sistema de Gestión Educativa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🎓 Sistema de Gestión Educativa</h1>
+                <p>Proyecto Final - Java Fullstack Developer</p>
+            </div>
+            <nav class="nav">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#estudiantes" class="nav-link">Estudiantes</a>
+                <a href="#profesores" class="nav-link">Profesores</a>
+                <a href="#cursos" class="nav-link">Cursos</a>
+                <a href="#inscripciones" class="nav-link">Inscripciones</a>
+                <a href="#reportes" class="nav-link">Reportes</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Sección Inicio -->
+        <section id="inicio" class="section active">
+            <div class="container">
+                <div class="hero">
+                    <h2>Bienvenido al Sistema de Gestión Educativa</h2>
+                    <p class="subtitle">Gestiona estudiantes, profesores, cursos e inscripciones de forma eficiente</p>
+                    
+                    <!-- Estadísticas -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">👨‍🎓</div>
+                            <div class="stat-number" id="totalEstudiantes">0</div>
+                            <div class="stat-label">Estudiantes</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">👨‍🏫</div>
+                            <div class="stat-number" id="totalProfesores">0</div>
+                            <div class="stat-label">Profesores</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📚</div>
+                            <div class="stat-number" id="totalCursos">0</div>
+                            <div class="stat-label">Cursos</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📝</div>
+                            <div class="stat-number" id="totalInscripciones">0</div>
+                            <div class="stat-label">Inscripciones</div>
+                        </div>
+                    </div>
+
+                    <!-- Características -->
+                    <div class="features">
+                        <h3>Características del Sistema</h3>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h4>🎯 Gestión Completa</h4>
+                                <p>CRUD completo para estudiantes, profesores y cursos</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>💾 Base de Datos MySQL</h4>
+                                <p>Persistencia confiable con MySQL Workbench</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>🔍 Búsqueda Avanzada</h4>
+                                <p>Filtros y búsquedas por múltiples criterios</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>📊 Reportes</h4>
+                                <p>Estadísticas y reportes exportables</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>🔐 Patrón DAO</h4>
+                                <p>Arquitectura limpia y mantenible</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>✨ Interfaz Moderna</h4>
+                                <p>Diseño responsive con Flexbox y Grid</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Estudiantes -->
+        <section id="estudiantes" class="section">
+            <div class="container">
+                <h2>👨‍🎓 Gestión de Estudiantes</h2>
+                
+                <div class="action-bar">
+                    <button class="btn btn-primary" onclick="mostrarFormularioEstudiante()">
+                        ➕ Nuevo Estudiante
+                    </button>
+                    <input type="text" id="buscarEstudiante" class="search-input" 
+                           placeholder="🔍 Buscar por nombre, matrícula o documento...">
+                </div>
+
+                <!-- Formulario de Estudiante -->
+                <div id="formEstudiante" class="form-container" style="display: none;">
+                    <h3>Registrar Nuevo Estudiante</h3>
+                    <form id="estudianteForm" class="form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="tipoDoc">Tipo de Documento</label>
+                                <select id="tipoDoc" required>
+                                    <option value="">Seleccione...</option>
+                                    <option value="DNI">DNI</option>
+                                    <option value="PASAPORTE">Pasaporte</option>
+                                    <option value="CI">Cédula de Identidad</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="numeroDoc">Número de Documento</label>
+                                <input type="text" id="numeroDoc" required pattern="[0-9]{8,12}">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="apellido">Apellido</label>
+                                <input type="text" id="apellido" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fechaNac">Fecha de Nacimiento</label>
+                                <input type="date" id="fechaNac" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" pattern="[0-9]{10}">
+                            </div>
+                            <div class="form-group">
+                                <label for="direccion">Dirección</label>
+                                <input type="text" id="direccion">
+                            </div>
+                            <div class="form-group">
+                                <label for="matricula">Matrícula</label>
+                                <input type="text" id="matricula" required placeholder="EST-2024-001">
+                            </div>
+                            <div class="form-group">
+                                <label for="fechaIngreso">Fecha de Ingreso</label>
+                                <input type="date" id="fechaIngreso" required>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">💾 Guardar</button>
+                            <button type="button" class="btn btn-secondary" onclick="ocultarFormularioEstudiante()">
+                                ❌ Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tabla de Estudiantes -->
+                <div class="table-container">
+                    <table id="tablaEstudiantes" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Matrícula</th>
+                                <th>Nombre Completo</th>
+                                <th>Documento</th>
+                                <th>Email</th>
+                                <th>Promedio</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Se llena dinámicamente con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Cursos -->
+        <section id="cursos" class="section">
+            <div class="container">
+                <h2>📚 Catálogo de Cursos</h2>
+                <div class="courses-grid" id="cursosGrid">
+                    <!-- Se llena dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Reportes -->
+        <section id="reportes" class="section">
+            <div class="container">
+                <h2>📊 Reportes y Estadísticas</h2>
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <h3>📈 Estadísticas Generales</h3>
+                        <ul>
+                            <li>Total de estudiantes activos: <span id="estActivos">0</span></li>
+                            <li>Promedio general: <span id="promedioGral">0.00</span></li>
+                            <li>Cursos con mayor inscripción: <span id="cursoTop">-</span></li>
+                        </ul>
+                    </div>
+                    <div class="report-card">
+                        <h3>🎓 Por Estado Académico</h3>
+                        <div id="estadisticasEstado"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sistema de Gestión Educativa - Proyecto Final Java Fullstack</p>
+            <p>Desarrollado por <strong>Ludmila Martos</strong></p>
+            <div class="social-links">
+                <a href="https://github.com/Ludmimar" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/ludmimar89/" target="_blank">LinkedIn</a>
+                <a href="mailto:ludmilamartos@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+

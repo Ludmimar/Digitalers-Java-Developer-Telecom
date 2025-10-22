@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID" version="4.0">
+    
+    <display-name>Sistema de Gestión Educativa</display-name>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Configuración de sesiones -->
+    <session-config>
+        <session-timeout>30</session-timeout> <!-- 30 minutos -->
+    </session-config>
+    
+    <!-- Servlet de Estudiantes -->
+    <servlet>
+        <servlet-name>EstudianteServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.EstudianteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EstudianteServlet</servlet-name>
+        <url-pattern>/estudiantes</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet de Login -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet de Logout -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet de Profesores -->
+    <servlet>
+        <servlet-name>ProfesorServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.ProfesorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProfesorServlet</servlet-name>
+        <url-pattern>/profesores</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet de Cursos -->
+    <servlet>
+        <servlet-name>CursoServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.CursoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CursoServlet</servlet-name>
+        <url-pattern>/cursos</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet de Correlatividades -->
+    <servlet>
+        <servlet-name>CorrelatividadServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.CorrelatividadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CorrelatividadServlet</servlet-name>
+        <url-pattern>/correlatividades</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet de Inscripciones -->
+    <servlet>
+        <servlet-name>InscripcionServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.InscripcionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InscripcionServlet</servlet-name>
+        <url-pattern>/inscripciones</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet de Dashboard -->
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.DashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet de Cursos Ofrecidos -->
+    <servlet>
+        <servlet-name>CursoOfrecidoServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.CursoOfrecidoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CursoOfrecidoServlet</servlet-name>
+        <url-pattern>/cursos-ofrecidos</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet de Aulas -->
+    <servlet>
+        <servlet-name>AulaServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.AulaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AulaServlet</servlet-name>
+        <url-pattern>/aulas</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet de Períodos Académicos -->
+    <servlet>
+        <servlet-name>PeriodoAcademicoServlet</servlet-name>
+        <servlet-class>com.educacionit.sistemaeducativo.servlets.PeriodoAcademicoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PeriodoAcademicoServlet</servlet-name>
+        <url-pattern>/periodos</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
+
