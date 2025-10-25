@@ -652,8 +652,15 @@ DB_PASSWORD=tu-password
 - Despliegue en Railway.app o Azure
 - Monitoreo y logging con Spring Actuator
 
-### ¿Quieres contribuir?
-Si encuentras algún error o tienes sugerencias de mejora, ¡siéntete libre de abrir un issue o enviar un pull request!
+---
+## 📞 Contacto
+
+**Ludmila Martos**
+- 📧 Email: [ludmilamartos@gmail.com](mailto:ludmilamartos@gmail.com)
+- 💼 LinkedIn: [Ludmila Martos](https://www.linkedin.com/in/ludmimar89/)
+- 🐙 GitHub: [Ludmimar](https://github.com/Ludmimar)
+- 🌐 Portfolio: [ludmilamartos.dev](https://ludmilamartos.dev)
+
 
 ---
 
