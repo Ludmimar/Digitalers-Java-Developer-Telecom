@@ -18,7 +18,7 @@
 ### 📊 **Estado del Proyecto**
 ![Módulos Completados](https://img.shields.io/badge/Módulos%20Completados-32%2F32-success?style=flat-square)
 ![Progreso](https://img.shields.io/badge/Progreso-100%25-success?style=flat-square)
-![Última Actualización](https://img.shields.io/badge/Última%20Actualización-Octubre%202025-lightblue?style=flat-square)
+![Última Actualización](https://img.shields.io/badge/Última%20Actualización-Noviembre%202025-lightblue?style=flat-square)
 ![Proyectos Finales](https://img.shields.io/badge/Proyectos%20Finales-2%2F2-success?style=flat-square)
 ![Licencia](https://img.shields.io/badge/Licencia-Educativa-purple?style=flat-square)
 
@@ -241,7 +241,7 @@ cd "PROYECTO-FINAL-SISTEMA-EDUCATIVO 01"
 - **Módulos completados**: 32/32 (100%)
 - **Tiempo total invertido**: ~8-9 meses
 - **Horas de estudio**: 200+ horas
-- **Curso completado**: ✅ Octubre 2025
+- **Curso completado**: ✅ Noviembre 2025
 
 ## 🏆 Competencias Adquiridas
 
@@ -689,7 +689,7 @@ DB_PASSWORD=tu-password
 
 **Desarrollado con ❤️ y mucho ☕ para la comunidad educativa**
 
-**🎓 Curso Completado - Octubre 2025**
+**🎓 Curso Completado - Noviembre 2025**
 
 © 2025 Ludmila Martos | Digitalers - Java Developer Telecom
 
