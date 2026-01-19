@@ -308,28 +308,6 @@ cd "PROYECTO-FINAL-SISTEMA-EDUCATIVO 01"
 
 ---
 
-## 🎉 Curso Completado - 100%
-
-**¡Felicidades!** Has completado exitosamente **32 de 32 módulos** del curso **Java Fullstack & Desarrollo Web - Digitalers Telecom**. 
-
-### 🎓 Logros del Programa
-
-Este repositorio representa **8-9 meses** de aprendizaje intensivo y contiene:
-
-- ✅ **32 módulos completados** con documentación completa
-- ✅ **120+ README** profesionales documentando cada proyecto, desafío y laboratorio
-- ✅ **160+ ejercicios** y laboratorios prácticos resueltos
-- ✅ **30+ proyectos integradores** progresivos por fase
-- ✅ **2 proyectos finales** de nivel empresarial (consola + web)
-- ✅ **1,600+ archivos** de código (Java, JSP, HTML, CSS, JS, SQL, Spring Boot)
-- ✅ **500+ clases Java** implementadas con patrones de diseño
-- ✅ **30+ páginas JSP** con interfaces dinámicas
-- ✅ **100+ PDFs** de material teórico y apoyo
-- ✅ **Sistema completo** de gestión educativa con 9 entidades
-- ✅ **APIs REST** completas con Spring Boot, Seguridad y Swagger
-
----
-
 ### 📈 Resumen Ejecutivo del Curso
 
 #### **Fase 1: Fundamentos de Java** (MOD 01-05) ✅ **140+ archivos**
@@ -386,20 +364,6 @@ Este repositorio representa **8-9 meses** de aprendizaje intensivo y contiene:
 - Servlets: arquitectura cliente-servidor, Tomcat
 - JSP: páginas dinámicas, sesiones HTTP, JSTL
 - **150+ archivos** en MOD 28 con proyecto web completo
-
----
-
-## 🎓 Logros del Curso
-
-### 📚 **Módulos Completados**: 32/32 (100%)
-
-**✅ Fases Completadas**:
-- ✅ FASE 1: Fundamentos de Java (MOD 01-05)
-- ✅ FASE 2: Desarrollo Web Frontend & IA (MOD 06-09)
-- ✅ FASE 3: Bases de Datos SQL (MOD 10-14)
-- ✅ FASE 4: HTML/CSS Avanzado (MOD 15-19)
-- ✅ FASE 5: Java Avanzado y Backend Java EE (MOD 20-28)
-- ✅ FASE 6: Spring Framework y Microservicios (MOD 29-32) - Completado
 
 ---
 
@@ -541,24 +505,11 @@ Este repositorio representa **8-9 meses** de aprendizaje intensivo y contiene:
 
 ---
 
----
-
 ## 👨‍💻 Autor
 
 **Ludmila Martos** - *Java Full Stack Developer*
 
 Desarrolladora apasionada por la tecnología y el aprendizaje continuo. Este repositorio documenta mi trayectoria completa en el programa Digitalers - Java Developer Telecom, desde los fundamentos de programación hasta el desarrollo de aplicaciones empresariales con Java EE.
-
-### 🎯 Especialización
-- ✅ Desarrollo Backend con Java SE, Java EE y Spring Boot
-- ✅ Desarrollo Frontend con HTML5, CSS3, JavaScript
-- ✅ APIs REST con Spring Boot y documentación Swagger/OpenAPI
-- ✅ Seguridad en APIs REST con Spring Security
-- ✅ Arquitectura de aplicaciones web (MVC, DAO, Layered Architecture)
-- ✅ Bases de datos relacionales (MySQL, PostgreSQL)
-- ✅ Programación Funcional y Streams API
-- ✅ Integración de IA en desarrollo
-
 
 ---
 ## 📞 Contacto
